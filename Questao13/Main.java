@@ -1,14 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        Lampada lampada1 = new Lampada("Philips", 60, "LED", 25.99f, "Branco Quente", 50);
-        Lampada lampada2 = new Lampada("Osram", 40, "Fluorescente", 15.50f, "Branco Frio", 30);
+        ContaBancariaSimplificada conta1 = new ContaBancariaSimplificada("João", 1000f);
+        ContaBancariaSimplificada conta2 = new ContaBancariaSimplificada("Maria", 500f);
 
-        System.out.println("Informações da Lâmpada 1:");
-        lampada1.exibirInformacoes();
-        System.out.println();
+        System.out.println("Saldo inicial João: R$ " + conta1.getSaldo());
+        System.out.println("Saldo inicial Maria: R$ " + conta2.getSaldo());
 
-        System.out.println("Informações da Lâmpada 2:");
-        lampada2.exibirInformacoes();
-        System.out.println();
+        if (ContaBancariaSimplificada.transfere(conta1, conta2, 300f)) {
+            System.out.println("Transferência realizada com sucesso!");
+        } else {
+            System.out.println("Transferência falhou.");
+        }
+
+        System.out.println("Saldo final João: R$ " + conta1.getSaldo());
+        System.out.println("Saldo final Maria: R$ " + conta2.getSaldo());
     }
 }
