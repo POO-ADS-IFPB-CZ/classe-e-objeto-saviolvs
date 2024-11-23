@@ -8,7 +8,7 @@ Questão 1:
   <li>cor: Cor da luz emitida pela lâmpada (String)</li>
   <li>estoque: Quantidade disponível no estoque (int)</li>
 </ul>
-\Questão 7:
+\nQuestão 7:
 \Nome da classe inválido, pois o nome da classe não pode conter espaços. O correto seria -> RegistroDeEleitor.\
 Os atributos da classe estão públicos por padrão. O certo seria torná-los privados e usar getters e setters.\
 \Questão 8:
